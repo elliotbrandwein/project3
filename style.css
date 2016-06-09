@@ -1,6 +1,6 @@
 #ia {
 	text-decoration: none;
-	color: white;
+	color: black;
 }
 
 #inav {
@@ -21,5 +21,5 @@
 }
 
 body {
-	background-color: black;
+	background-color: body;
 }
