@@ -1,0 +1,25 @@
+#ia {
+	text-decoration: none;
+	color: white;
+}
+
+#inav {
+	margin-right: 10%;
+}
+
+#ili {
+	float: right;
+	list-style: none;
+	display: inline;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#isocial {
+	display: inline;
+	position: fixed;
+}
+
+body {
+	background-color: black;
+}
