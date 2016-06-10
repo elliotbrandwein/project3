@@ -36,6 +36,10 @@ function onSearch()
             modAmount=images.Search.length;
           }
           $("#poster").html('<img src = "' + response.Search[0].Poster + '"/>');
+          document.getElementById("number-text").innerHTML = "Displaying 1 of " + modAmount;
+          var s = "Title: " + response.Search[0].Title + "<br>";
+          s += "Year: " + response.Search[0].Year + "<br>";
+          document.getElementById("info-text").innerHTML = s;
         }
     });
   }
@@ -45,5 +49,10 @@ function onSearch()
 function next(){
   index= (index+1)%modAmount;
   $("#poster").html('<img src = "' + images.Search[index].Poster + '"/>');
+  var num = (index%modAmount) +1;
+  document.getElementById("number-text").innerHTML = "Displaying " + num + " of " + modAmount;
+  var s = "Title: " + images.Search[0].Title + "<br>";
+  s += "Year: " + images.Search[0].Year + "<br>";
+  document.getElementById("info-text").innerHTML = s;
 }
 
