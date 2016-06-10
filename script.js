@@ -52,6 +52,37 @@ function reset()
 }
 function image()
 {
+
+  $("#poster").html('<img src = "' + images.Search[index].Poster + '"/>');
+  var num = (index%modAmount) +1;
+  document.getElementById("number-text").innerHTML = "Displaying " + num + " of " + modAmount;
+  var s = "Title: " + images.Search[index].Title + "<br>";
+  s += "Year: " + images.Search[index].Year + "<br>";
+  $("#number-text").slideUp();
+  document.getElementById("info-text").innerHTML = s;
+  $("#number-text").slideDown();
+}
+function next()
+{
+  //button();
+  index= (index+1)%modAmount;
+  $("#poster").fadeOut(600);
+  delayImage();
+  $("#poster").fadeIn(600);
+}
+
+function button()
+{
+  if(setButton)
+  {
+    $("#next-button").hide();
+    setButton=false;
+  }
+  else{
+    setButton=true;
+    $("#next-button").show();
+  }
+
   $("#poster").html('<img src = "' + images.Search[index].Poster + '"/>');
   var num = (index%modAmount) +1;
   document.getElementById("number-text").innerHTML = "Displaying " + num + " of " + modAmount;
@@ -59,31 +90,18 @@ function image()
   s += "Year: " + images.Search[index].Year + "<br>";
   document.getElementById("info-text").innerHTML = s;
 }
-function next()
-{
-  button();
-  index= (index+1)%modAmount;
-  $("#poster").fadeOut(600);
-  delayImage();
-  $("#poster").fadeIn(600);
+function delayChange(){
+  
 }
-function button()
-{
-  if(setButton)
-  {
-    $("#search-button").prop("disabled");
-    setButton=false;
-  }
-  else{
-    setButton=true;
-    $("#search-button").prop("enabled");
-  }
-}
-
-
 function delayImage()
 {
   var timeoutID = window.setTimeout(image, 600);
-  var timeoutButtonID = window.setTimeout(button, 600);
+  //var timeoutButtonID = window.setTimeout(button, 650);
+}
+
+function onReset() {
+    document.getElementById("poster").innerHTML ="";
+    document.getElementById("info-text").innerHTML ="";
+    document.getElementById("number-text").innerHTML = "";
 }
 

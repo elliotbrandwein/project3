@@ -42,8 +42,8 @@
                 <input type="radio" name="type" id="movie" checked> Movies
   				<input type="radio" name="type" id="series"> Series
   				<input type="radio" name="type" id="episode"> Episode
-                <button id="search-button" type="button" class="btn-sm btn-primary" onclick="onSearch()">Search</button>
-                <button id="reset-button" type="reset" class="btn-sm" onclick ="next()">Reset</button>
+                <button id="search-button" type="button" onclick="onSearch()">Search</button>
+                <button id="reset-button" type="reset"  onclick ="onReset()">Reset</button>
              </div>
         </form>
     </div><br>
@@ -56,10 +56,14 @@
     	<div class="info">
     		<h2 id="info-text"> </h2>
     	</div>
-    </div>	
+    </div><br>
+    <div style="text-align:center;">
+    	<button id="next-button" type="next" onclick ="next()">Next</button>
+	</div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
-
+   
         <!--  
 		<ul style="list-style-type:none; margin-left:-2em;" id ="carasole">
 		    <li id="carasole" class="hideable" style="display: block;"><img src="photos/tier-1-home-1.jpg" alt="hinterground" id ="img1" /></li>
