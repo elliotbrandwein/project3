@@ -1,5 +1,6 @@
 var images=null;
 var index = 0;
+var modAmount =5;
 function onSearch() 
 {
     var title = $('input[name=s]').val();
@@ -31,12 +32,18 @@ function onSearch()
         {    
           images=response;
           console.log(response);
+          if (images.Search.length<5){
+            modAmount=images.Search.length;
+          }
           $("#poster").html('<img src = "' + response.Search[0].Poster + '"/>');
         }
     });
   }
+  function reset(){
+
+  }
 function next(){
-  index= (index+1)%5;
+  index= (index+1)%modAmount;
   $("#poster").html('<img src = "' + images.Search[index].Poster + '"/>');
 }
 
