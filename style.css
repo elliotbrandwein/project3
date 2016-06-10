@@ -1,0 +1,33 @@
+#ia {
+	text-decoration: none;
+	color: white;
+}
+
+#inav {
+	margin-right: 10%;
+}
+
+#ili {
+	float: right;
+	list-style: none;
+	display: inline;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#isocial {
+	display: inline;
+	position: fixed;
+}
+
+body
+{
+	background-color: #333333;
+	font-family: Arial;
+	color: white;
+}
+.form-div{
+	min-width: 900px;
+	padding-top: 5%;
+	padding-left: 20%;
+}

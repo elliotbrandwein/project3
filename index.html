@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<nav id="inav">
+			<ul>
+				<li id="ili">
+					<a id="ia" href="about.html">About</a>
+				</li>
+				<li id="ili">
+					<a id="ia" href="index.html">Home</a>
+				</li>
+			</ul>
+		</nav>
+		<div id="isocial">
+			<div>
+				<a href="https://www.facebook.com/">
+					<img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-facebook-128.png" height = "50px" width="50px">
+				</a>
+			</div>
+			<div>
+				<a href="https://twitter.com/">
+					<img src="https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/twitter_letter-512.png" height = "50px" width="50px">
+				</a>
+			</div>
+		</div>
+	</header><br>
+</head>
+<body>
+    <div class="form-div">
+      <form>
+            <div>
+                <label>Title:</label>
+                <input id="s" name ="s">
+                <label>Year:</label>
+                <input id="y" name="y" style="width: 100px;" type="text">
+                <input type="radio" name="type" id="movie" checked> Movies
+  				<input type="radio" name="type" id="series"> Series
+  				<input type="radio" name="type" id="episode"> Episode
+                <button id="search-by-title-button" type="button" class="btn-sm btn-primary" onclick="onSearch()">Search</button>
+                <button id="search-by-title-reset" type="reset" class="btn-sm">Reset</button>
+             </div>
+        </form>
+    </div>
+    <div class="return">
+    	<div id= "poster">
+    		
+    	</div>
+    	<div class="info">
+    		<!-- this should have several lines of text, like the summery, rating, and other things -->
+    	</div>
+    </div>	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="slides-script.js"></script>
+</body>
+</html>
