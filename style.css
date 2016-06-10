@@ -1,6 +1,6 @@
 #ia {
 	text-decoration: none;
-	color: black;
+	color: white;
 }
 
 #inav {
@@ -20,6 +20,9 @@
 	position: fixed;
 }
 
-body {
-	background-color: body;
+body
+{
+	background-color: #333333;
+	font-family: Arial;
+	color: white;
 }
