@@ -38,12 +38,28 @@ function onSearch()
           $("#poster").html('<img src = "' + response.Search[0].Poster + '"/>');
         }
     });
-  }
-  function reset(){
+}
 
-  }
-function next(){
+function reset()
+{
+
+}
+
+function next()
+{
   index= (index+1)%modAmount;
+  $("#poster").fadeOut(600);
+  delayImage();
+  $("#poster").fadeIn(600);
+}
+
+function image()
+{
   $("#poster").html('<img src = "' + images.Search[index].Poster + '"/>');
+}
+
+function delayImage()
+{
+  var timeoutID = window.setTimeout(image, 600);
 }
 
