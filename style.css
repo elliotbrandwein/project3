@@ -43,12 +43,14 @@ body
 	float: left;
 	margin-left: 10px;
 	margin-right: 10px;
+	position: static;
 }
 
 #info {
 	float right;
 	margin-left: 10px;
 	margin-right: 10px;
+	position: static;
 
 }
 
@@ -56,4 +58,11 @@ body
 	margin: auto;
 	width: 60%;
 	padding: 10px;
+}
+
+#next-button {
+	position: inline-block;
+	width: 10%;
+	padding: 5px;
+	
 }

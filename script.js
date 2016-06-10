@@ -63,13 +63,19 @@ function image()
   $("#poster").html('<img src = "' + images.Search[index].Poster + '"/>');
   var num = (index%modAmount) +1;
   document.getElementById("number-text").innerHTML = "Displaying " + num + " of " + modAmount;
-  var s = "Title: " + images.Search[0].Title + "<br>";
-  s += "Year: " + images.Search[0].Year + "<br>";
+  var s = "Title: " + images.Search[index].Title + "<br>";
+  s += "Year: " + images.Search[index].Year + "<br>";
   document.getElementById("info-text").innerHTML = s;
 }
 
 function delayImage()
 {
   var timeoutID = window.setTimeout(image, 600);
+}
+
+function onReset() {
+    document.getElementById("poster").innerHTML ="";
+    document.getElementById("info-text").innerHTML ="";
+    document.getElementById("number-text").innerHTML = "";
 }
 
