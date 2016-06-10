@@ -29,7 +29,7 @@ function onSearch()
         },   
         dataType: "json",   
         success: function(response) 
-        {    
+        {
           images=response;
           console.log(response);
           if (images.Search.length<5){
@@ -40,14 +40,10 @@ function onSearch()
           var s = "Title: " + response.Search[0].Title + "<br>";
           s += "Year: " + response.Search[0].Year + "<br>";
           document.getElementById("info-text").innerHTML = s;
+          document.getElementById("next-button").style.display = 'block';
         }
     });
-}
-
-function reset()
-{
-  $("#poster").html();
-  $("#info").html();
+    return false;
 }
 
 function next()
@@ -77,5 +73,6 @@ function onReset() {
     document.getElementById("poster").innerHTML ="";
     document.getElementById("info-text").innerHTML ="";
     document.getElementById("number-text").innerHTML = "";
+    document.getElementById("next-button").style.display = 'none';
 }
 

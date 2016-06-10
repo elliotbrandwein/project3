@@ -33,7 +33,7 @@
 </head>
 <body>
     <div class="form-div">
-      <form>
+      <form onsubmit="return onSearch()" method="post">
             <div>
                 <label>Title:</label>
                 <input id="s" name ="s">
@@ -42,7 +42,7 @@
                 <input type="radio" name="type" id="movie" checked> Movies
   				<input type="radio" name="type" id="series"> Series
   				<input type="radio" name="type" id="episode"> Episode
-                <button id="search-by-title-button" type="button" class="btn-sm btn-primary" onclick="onSearch()">Search</button>
+                <button id="search-by-title-button" type="submit" class="btn-sm btn-primary" onclick="onSearch()">Search</button>
                 <button id="search-by-title-reset" type="button" class="btn-sm" onclick ="onReset()">Reset</button>
              </div>
         </form>
@@ -54,12 +54,10 @@
     		
     	</div>
     	<div class="info">
-    		<h2 id="info-text"> </h2>
+    		<h3 id="info-text"> </h3>
     	</div>
+    	<button id="next-button" type="next" style="display: none" onclick ="next()">Next</button>
     </div><br>
-    <div style="text-align:center;">
-    	<button id="next-button" type="next" onclick ="next()">Next</button>
-	</div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script type="text/javascript" src="script.js"></script>

@@ -41,17 +41,12 @@ body
 
 #poster {
 	float: left;
-	margin-left: 10px;
-	margin-right: 10px;
-	position: static;
+	width: 50%;
 }
 
 #info {
 	float right;
-	margin-left: 10px;
-	margin-right: 10px;
-	position: static;
-
+	width: 40%;
 }
 
 #number-text {
@@ -63,6 +58,7 @@ body
 #next-button {
 	position: inline-block;
 	width: 10%;
+	margin-top: 5%;
 	padding: 5px;
 	
 }
