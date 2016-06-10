@@ -1,6 +1,7 @@
 var images=null;
 var index = 0;
 var modAmount =5;
+var setButton =true;
 function onSearch() 
 {
     var title = $('input[name=s]').val();
@@ -49,27 +50,40 @@ function reset()
   $("#poster").html();
   $("#info").html();
 }
-
-function next()
-{
-  index= (index+1)%modAmount;
-  $("#poster").fadeOut(600);
-  delayImage();
-  $("#poster").fadeIn(600);
-}
-
 function image()
 {
   $("#poster").html('<img src = "' + images.Search[index].Poster + '"/>');
   var num = (index%modAmount) +1;
   document.getElementById("number-text").innerHTML = "Displaying " + num + " of " + modAmount;
-  var s = "Title: " + images.Search[0].Title + "<br>";
-  s += "Year: " + images.Search[0].Year + "<br>";
+  var s = "Title: " + images.Search[index].Title + "<br>";
+  s += "Year: " + images.Search[index].Year + "<br>";
   document.getElementById("info-text").innerHTML = s;
 }
+function next()
+{
+  button();
+  index= (index+1)%modAmount;
+  $("#poster").fadeOut(600);
+  delayImage();
+  $("#poster").fadeIn(600);
+}
+function button()
+{
+  if(setButton)
+  {
+    $("#search-button").prop("disabled");
+    setButton=false;
+  }
+  else{
+    setButton=true;
+    $("#search-button").prop("enabled");
+  }
+}
+
 
 function delayImage()
 {
   var timeoutID = window.setTimeout(image, 600);
+  var timeoutButtonID = window.setTimeout(button, 600);
 }
 
