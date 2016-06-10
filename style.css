@@ -26,3 +26,8 @@ body
 	font-family: Arial;
 	color: white;
 }
+.form-div{
+	min-width: 900px;
+	padding-top: 5%;
+	padding-left: 20%;
+}
