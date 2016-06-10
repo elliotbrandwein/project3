@@ -42,7 +42,8 @@ function onSearch()
 
 function reset()
 {
-
+  $("#poster").html();
+  $("#info").html();
 }
 
 function next()
