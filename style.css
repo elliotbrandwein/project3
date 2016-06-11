@@ -40,13 +40,13 @@ body
 }
 
 #poster {
-	float: left;
-	width: 50%;
+	float: right;
+	width: 49%;
 }
 
 #info {
-	float right;
-	width: 40%;
+	float: left;
+	width: 49%;
 }
 
 #number-text {
