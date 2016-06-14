@@ -40,18 +40,13 @@ body
 }
 
 #poster {
-	float: left;
-	margin-left: 10px;
-	margin-right: 10px;
-	position: static;
+	float: right;
+	width: 49%;
 }
 
 #info {
-	float right;
-	margin-left: 10px;
-	margin-right: 10px;
-	position: static;
-
+	float: left;
+	width: 49%;
 }
 
 #number-text {
@@ -63,6 +58,12 @@ body
 #next-button {
 	position: inline-block;
 	width: 10%;
-	padding: 5px;
-	
+	margin-top: 5%;
+	padding: 5px;	
+}
+
+#about-div {
+	margin-left: 10%;
+	margin-top: 10%;
+	margin-right: 10%;
 }

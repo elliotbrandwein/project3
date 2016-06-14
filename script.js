@@ -30,7 +30,7 @@ function onSearch()
         },   
         dataType: "json",   
         success: function(response) 
-        {    
+        {
           images=response;
           console.log(response);
           if (images.Search.length<5){
@@ -41,14 +41,10 @@ function onSearch()
           var s = "Title: " + response.Search[0].Title + "<br>";
           s += "Year: " + response.Search[0].Year + "<br>";
           document.getElementById("info-text").innerHTML = s;
+          document.getElementById("next-button").style.display = 'block';
         }
     });
-}
-
-function reset()
-{
-  $("#poster").html();
-  $("#info").html();
+    return false;
 }
 function image()
 {
@@ -58,17 +54,17 @@ function image()
   document.getElementById("number-text").innerHTML = "Displaying " + num + " of " + modAmount;
   var s = "Title: " + images.Search[index].Title + "<br>";
   s += "Year: " + images.Search[index].Year + "<br>";
-  $("#number-text").slideUp();
   document.getElementById("info-text").innerHTML = s;
-  $("#number-text").slideDown();
 }
 function next()
 {
   //button();
   index= (index+1)%modAmount;
   $("#poster").fadeOut(600);
-  delayImage();
+  $("#info-text").slideUp(600);
+  delay();
   $("#poster").fadeIn(600);
+  $("#info-text").slideDown(600);
 }
 
 function button()
@@ -90,18 +86,16 @@ function button()
   s += "Year: " + images.Search[index].Year + "<br>";
   document.getElementById("info-text").innerHTML = s;
 }
-function delayChange(){
-  
-}
-function delayImage()
+function delay()
 {
   var timeoutID = window.setTimeout(image, 600);
-  //var timeoutButtonID = window.setTimeout(button, 650);
+  //var timeoutButtonID = window.setTimeout(button, 600);
 }
 
 function onReset() {
     document.getElementById("poster").innerHTML ="";
     document.getElementById("info-text").innerHTML ="";
     document.getElementById("number-text").innerHTML = "";
+    document.getElementById("next-button").style.display = 'none';
 }
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Movie Search</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -50,29 +50,14 @@
     <h2 id="number-text">
     </h2>
     <div id="movie-list">
-    	<div id= "poster">
-    		
+    	<div id="info">
+    		<h3 id="info-text"> </h3>
+    		<button id="next-button" type="next" style="display: none" onclick ="next()">Next</button>
     	</div>
-    	<div class="info">
-    		<h2 id="info-text"> </h2>
-    	</div>
-    </div><br>
-    <div style="text-align:center;">
-    	<button id="next-button" type="next" onclick ="next()">Next</button>
-	</div>
-
+    	<div id= "poster"></div>
+    	<br style="clear:both;"/>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
-   
-        <!--  
-		<ul style="list-style-type:none; margin-left:-2em;" id ="carasole">
-		    <li id="carasole" class="hideable" style="display: block;"><img src="photos/tier-1-home-1.jpg" alt="hinterground" id ="img1" /></li>
-		    <li id="carasole" class="hideable" ><img src="" alt="home-1-2" id ="img2"/></li>
-		    <li id="carasole" class="hideable"><img src="" alt="home-1-3" id ="img3" /></li>
-		    <li id="carasole" class="hideable"><img src="" alt="home-1-4" id ="img4"/></li>
-		    <li id="carasole" class="hideable"><img src="" alt="home-1-5" id ="img5"/></li>
-		</ul>
-		-->
-
 </body>
 </html>
