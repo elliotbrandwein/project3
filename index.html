@@ -32,7 +32,7 @@
 	</header><br>
 </head>
 <body>
-    <div class="form-div">
+    <div class="form-div" onclick = "return onSearch()" method = "post">
       <form>
             <div>
                 <label>Title:</label>
@@ -42,7 +42,7 @@
                 <input type="radio" name="type" id="movie" checked> Movies
   				<input type="radio" name="type" id="series"> Series
   				<input type="radio" name="type" id="episode"> Episode
-                <button id="search-button" type="button" onclick="onSearch()">Search</button>
+                <button id="search-button" type="submit" onclick="onSearch()">Search</button>
                 <button id="reset-button" type="reset"  onclick ="onReset()">Reset</button>
              </div>
         </form>
