@@ -59,6 +59,11 @@ body
 	position: inline-block;
 	width: 10%;
 	margin-top: 5%;
-	padding: 5px;
-	
+	padding: 5px;	
+}
+
+#about-div {
+	margin-left: 10%;
+	margin-top: 10%;
+	margin-right: 10%;
 }
